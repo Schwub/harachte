@@ -1,0 +1,24 @@
+camera:
+  camera:
+  connected: False
+  width: 
+  height: 
+board:
+  board:
+  serial_name:
+  baud_rate:
+  connected: False
+  laser_right_on: False
+  laser_left_on: False
+  x_motor:
+    motor_acceleration: 0
+    motor_position: 0
+    motor_speed: 0
+  y_motor:
+    motor_acceleration: 0
+    motor_position: 0
+    motor_speed: 0
+  rotation_motor:
+    motor_acceleration: 0
+    motor_position: 0
+    motor_speed: 0

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="text-center">
+<h2>Connect</h2>
+<h3>Connect to Board</h3>
+{% if model['board']['connected'] %}
+Board is connected
+{% else %}
+Board is not connected
+{% endif %}
+<h3>Connect to Camera</h3>
+</div>
+{% endblock %}
