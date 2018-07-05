@@ -1,13 +1,29 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="text-center">
-<h2>Connect</h2>
-<h3>Connect to Board</h3>
-{% if model['board']['connected'] %}
-Board is connected
-{% else %}
-Board is not connected
-{% endif %}
+	<h3>Connect to Board</h3>
+	{% if model['board']['connected'] %}
+	<div class="alert alert-success" role="alert">
+		Board is connected
+		<form method="POST", action="">
+			{{disconnectBoardForm.submit()}}
+		</form>
+	</div>
+	{% else %}
+	<div class="alert alert-danger" role="alert">
+		Board is not connected
+		<form method="POST", action="">
+			{{connectBoardForm.hidden_tag()}}
+			{{connectBoardForm.serialname.label}}
+			{{connectBoardForm.serialname}}
+			<br>
+			{{connectBoardForm.baudrate.label}}
+			{{connectBoardForm.baudrate}}
+			<br>
+			{{connectBoardForm.submit()}}
+		</form>
+	</div>
+	{% endif %}
 <h3>Connect to Camera</h3>
 </div>
 {% endblock %}
